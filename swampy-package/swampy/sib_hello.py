@@ -95,6 +95,7 @@ def E_H (bob, n):
 rt(bob)
 
 #draws the word HELLO
+
 L(bob, 10)
 L(bob, 10)
 O(bob, 10)
