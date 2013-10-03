@@ -11,9 +11,12 @@ Explain what each of the following lines does. Use the terminology you learned f
 	bob = Turtle()
 	wait_for_user()
 
-Answer:
+Answer: 
 
-
+Line 9 imports the classes (and their functions) from TurtleWorld 
+Line 10 creates a new instance of the TurtleWorld() class and assigns it to the variable 'world'
+Line 11 creates a new instance of the Turtle() class and assigns it to the variable 'bob'
+Line 12 calls a function from the World class (a parameter for TurtleWorld) within the current environment (GUI, which is a parameter of World()) that halts python (with the MainLoop() constructor) until there's further interaction from the keyboard. 
 
 
 
@@ -22,9 +25,14 @@ These questions pertain to the program you wrote in Week0.
 
 -- What are the arguments of polygon()?  What type is each argument?
 Answer:
+t = Turtle, str
+n = number of sides, int
+l = length of each side, int
 
 -- What two turtle functions did you use to draw the sides of the polygon?
 Answer:
+fd()
+rt()
 
 -- What are the arguments for polyline?  What type is each argument?
 Answer:

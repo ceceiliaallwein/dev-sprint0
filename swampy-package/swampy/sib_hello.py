@@ -9,7 +9,7 @@ bob = Turtle()
 
 # This is where you put code to move bob
 
-#Functions
+#FUNCTIONS
 
 #pen-down moves
 def draw_1 (bob, n):
@@ -89,9 +89,9 @@ def E_H (bob, n):
 	draw_1(bob, n)
 
 
-#CALLS
+#FUNCTION CALLS
 
-#positions turtle 
+#positions turtle to start
 rt(bob)
 
 #draws the word HELLO
@@ -107,5 +107,5 @@ pu(bob)
 fd(bob, 20)
 twirl(bob)
 
-
+#the end... what's next? 
 wait_for_user()					
