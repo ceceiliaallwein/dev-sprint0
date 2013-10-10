@@ -1,11 +1,12 @@
 # Hello excercise from Week 0
 
-# Name:
+# Name: Ceceilia Allwein 
 
 
 from TurtleWorld import * 		
 world = TurtleWorld()			
 bob = Turtle()				
+bob.delay = 0.1
 
 # This is where you put code to move bob
 
@@ -95,7 +96,6 @@ def E_H (bob, n):
 rt(bob)
 
 #draws the word HELLO
-
 L(bob, 10)
 L(bob, 10)
 O(bob, 10)
@@ -108,4 +108,6 @@ fd(bob, 20)
 twirl(bob)
 
 #the end... what's next? 
-wait_for_user()					
+wait_for_user()			
+
+
