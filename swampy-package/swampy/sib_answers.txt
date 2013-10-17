@@ -1,6 +1,6 @@
 # Text answers from Week 0
 
-# Name: Ceceilia Allwein 
+# Name: 
 
 
 
@@ -13,13 +13,13 @@ Explain what each of the following lines does. Use the terminology you learned f
 
 Answer: 
 
-	LINE 9 imports the classes (and their functions) from TurtleWorld 
+	LINE 9 imports the classes (+ data, functions) from TurtleWorld 
 	
 	LINE 10 creates a new instance of the TurtleWorld() class and assigns it to the variable 'world'
 	
 	LINE 11 creates a new instance of the Turtle() class and assigns it to the variable 'bob'
 	
-	LINE 12 calls a method from the World class within the current environment (which inherits from GUI) and halts python (with the MainLoop() in Tk) until there's further input of text (any sort of code resulting from an action--doesn't matter what sort of device, b/c it's all essentially text-based code). 
+	LINE 12 calls a function from the World class within the current environment (which inherets from the GUI class) that halts python (with the MainLoop() in Tk) until there's further interaction, i.e. input of text from any action from any device... all code is essentially text. 
 
 
 These questions pertain to the program you wrote in Week0.
@@ -67,15 +67,17 @@ Answer:
 	# function calls
 	move_turtle (bob, no_sides, radius, angle)		#moves turtle w/o drawing 
 	circle(bob, radius)								#draws the circle
-	pu(bob)											#pen up, prepares move w/o drawing
+	pu(bob)											#prepares move w/o drawing
 	rt(bob, angle)
 	fd(bob, radius)
 	rt(bob, angle)
 	rt(bob, angle)
 
+
+
 -- What is this type of requirement called?
 Answer:
 
-A pre-condition, which is a general concept (perhaps even a best practice?) for similar functions. Turtle Typewriter is a good example of a program that depends on pre-conditions.  
+Precondition
 
 

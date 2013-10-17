@@ -27,7 +27,7 @@ def draw(t, length, n):
     bk(t, length*n)
 
 bob = Turtle()
-bob.delay = 0.001
+bob.delay = 0.1
 lt(bob)
 bk(bob, 70)
 draw(bob, 10, 7)

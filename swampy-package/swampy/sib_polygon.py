@@ -51,29 +51,64 @@ def circle (t, r):
 
 #circle (bob, 10)
 
-def line_subtend (turtle, no_sides, seg_length, angle):
-	''' draws line segments + turns similar
-	to square or square_ref '''
+def move_turtle (turtle, no_sides, seg_length, angle):
+	''' 
+	In the text this is called polyline. 
+	Moves (without drawing) line segments 
+	+ turns similar to square or square_ref 
+	'''
+	pu (turtle)
 	for i in range (no_sides):
+		fd (turtle, seg_length)
+		rt (turtle, angle)
+	pd (turtle)
+
+def line_subtend (turtle, no_sides, seg_length, angle):
+	''' 
+	In the text this is called polyline. 
+	Moves and draws line segments + turns 
+	similar to square or square_ref 
+	'''
+	pd (turtle)
+	for i in range (no_sides):
+		pd (turtle)
 		fd (turtle, seg_length)
 		rt (turtle, angle)
 
 def polygon (turtle, no_sides, seg_length): 
-	''' determines the angle of the turn 
-	based on the given number of sides'''
+	''' 
+	Determines the angle of the turn in 
+	line_subtend based on the number 
+	of sides
+	'''
 	angle = 360.0 / no_sides
 	line_subtend (turtle, no_sides, seg_length, angle)
 
 def arc (turtle, radius, angle):
-	'''defines 
+	'''
+	writes only a portion of the circumference 
+	of a circle, with a given radius and 
+	angle that the arc subtends 
 	''' 
-	circumference = 2 * math.pi * radius
-	seg_length = circumference * angle / 360
+	seg_length = 2 * math.pi * radius * angle / 360
 	no_sides = int(seg_length / radius)
 	draw_length = float(seg_length / no_sides)
 	angle_subtend_deg = angle / no_sides
 	line_subtend (turtle, no_sides, draw_length, angle_subtend_deg)
 
 arc(bob, 10, 30)
+
+radius = 50
+angle = 90
+no_sides = 1
+
+move_turtle (bob, no_sides, radius, angle)
+circle(bob, radius)
+pu(bob)
+rt(bob, angle)
+fd(bob, radius)
+rt(bob, angle)
+rt(bob, angle)
+
 
 wait_for_user()					
