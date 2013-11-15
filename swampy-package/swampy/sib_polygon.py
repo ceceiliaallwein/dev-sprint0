@@ -91,7 +91,7 @@ def arc (turtle, radius, angle):
 	angle that the arc subtends 
 	''' 
 	seg_length = 2 * math.pi * radius * angle / 360
-	no_sides = int(seg_length / radius)
+	no_sides = int(math.ceil(seg_length / radius))
 	draw_length = float(seg_length / no_sides)
 	angle_subtend_deg = angle / no_sides
 	line_subtend (turtle, no_sides, draw_length, angle_subtend_deg)

@@ -4,12 +4,12 @@
 
 
 
-from TurtleWorld import * 	 
+from TurtleWorld import *    
 import math 
 
-world = TurtleWorld()			
+world = TurtleWorld()           
 bob = Turtle()
-bob.delay = 0.01				
+bob.delay = 0.01                
 
 
 
@@ -38,14 +38,14 @@ def arc_mine (turtle, radius, angle):
     ''' 
     circumference = 2 * math.pi * radius
     seg_length = circumference * (angle / 360)
-    no_sides = int(seg_length / radius)
+    no_sides = int(math.ceil(seg_length / radius))
     draw_length = float(seg_length / no_sides)
     angle_subtend_deg = angle / no_sides
     line_subtend (turtle, no_sides, seg_length, angle)
     rt(turtle, angle_subtend_deg/2)
 
 def arc_duo (turtle, radius, angle):
-	for i in range (2):
+    for i in range (2):
         arc_mine (turtle, radius, angle)
         lt (turtle, 180-angle)
 
@@ -71,14 +71,14 @@ def position (turtle, distance):
 
 # CALLS
 
-position(bob, -100)
-flower(bob, 7, 60.0, 60.0)
+position(bob, -50)
+flower(bob, 7, 5, 10.0)
 
-position(bob, 100)
-flower(bob, 10, 40.0, 80.0)
+position(bob, 50)
+flower(bob, 10, 8, 20.0)
 
-position(bob, 100)
-flower(bob, 20, 140.0, 20.0)
+position(bob, 50)
+flower(bob, 20, 10, 30.0)
 
 
 
@@ -89,7 +89,7 @@ flower(bob, 20, 140.0, 20.0)
 # running as a script, in which case run the test code,
 # or being imported, in which case don't.
 
-
+'''
 if __name__ == '__main__':
     world = TurtleWorld()    
 
@@ -103,7 +103,8 @@ if __name__ == '__main__':
     lt(bob)
     pd(bob)
     arc(bob, radius, 35)
+'''
 
-    wait_for_user()
-				
+wait_for_user()
+                
 
